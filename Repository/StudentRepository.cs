@@ -1,12 +1,13 @@
 using System.Data;
 using CourseApi.Context;
+using CourseApi.Contracts;
 using CourseApi.DTOs;
 using CourseApi.Models;
 using Dapper;
 
 namespace CourseApi.Repository;
 
-public class StudentRepository
+public class StudentRepository : IStudentRepository
 {
     private readonly DapperContext _context;
     public StudentRepository(DapperContext context)
