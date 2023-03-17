@@ -38,7 +38,7 @@
 - [x] Swagger
 - [x] DTOs
 - [x] Repository Pattern
-- [x] Injeção de Dependência
+- [x] Dependency injection
 - [x] POO
 
 # 📖 Features
