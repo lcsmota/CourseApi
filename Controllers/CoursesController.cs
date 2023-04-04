@@ -32,7 +32,7 @@ public class CoursesController : ControllerBase
         }
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id}", Name = "GetCourseById")]
     public async Task<IActionResult> GetCourseAsync(int id)
     {
         try
@@ -88,7 +88,7 @@ public class CoursesController : ControllerBase
         {
             var createdCourse = await _courseRep.CreateCourseAsync(course);
 
-            return CreatedAtAction(nameof(GetCourseAsync), new { id = createdCourse.Id }, createdCourse);
+            return CreatedAtRoute("GetCourseById", new { id = createdCourse.Id }, createdCourse);
         }
         catch (System.Exception ex)
         {

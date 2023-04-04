@@ -32,7 +32,7 @@ public class StudentsController : ControllerBase
         }
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id}", Name = "GetStudentById")]
     public async Task<IActionResult> GetStudentAsync(int id)
     {
         try
@@ -56,7 +56,7 @@ public class StudentsController : ControllerBase
         {
             var createdStudent = await _studentRep.CreateStudentAsync(student);
 
-            return CreatedAtAction(nameof(GetStudentAsync), new { id = createdStudent.RA }, createdStudent);
+            return CreatedAtRoute("GetStudentById", new { id = createdStudent.RA }, createdStudent);
         }
         catch (System.Exception ex)
         {
