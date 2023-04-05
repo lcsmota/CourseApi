@@ -134,7 +134,7 @@ CREATE TABLE Students(
   POST https://localhost:7199/api/v1/Students
 ```
 📨  **body:**
-```
+```json
 {
   "nome": "Juca Monteiro",
   "idade": 32,
@@ -145,7 +145,7 @@ CREATE TABLE Students(
 ```
 
 🧾  **response:**
-```
+```json
 {
 
   "ra": 25,
@@ -181,7 +181,7 @@ CREATE TABLE Students(
 | `id`      | `int` | **Mandatory**. The ID of the object you want to update|
 
 📨  **body:**
-```
+```json
 {
   "nome": "Juca Monteiro",
   "idade": 32,
@@ -329,7 +329,7 @@ CREATE TABLE Students(
   POST https://localhost:7199/api/Courses
 ```
 📨  **body:**
-```
+```json
 {
   "nome": "Cybersecurity",
   "categoria": "Tech",
@@ -343,7 +343,7 @@ CREATE TABLE Students(
 ```
 
 🧾  **response:**
-```
+```json
 {
   "id": 10,
   "nome": "Cybersecurity",
@@ -382,7 +382,7 @@ CREATE TABLE Students(
 | `id`      | `int` | **Mandatory**. The ID of the object you want to update|
 
 📨  **body:**
-```
+```json
 {
   "turno": "Matutino",
   "cargaHoraria": 60,
